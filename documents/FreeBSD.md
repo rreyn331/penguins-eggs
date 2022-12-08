@@ -24,8 +24,16 @@ Added:
 * xorriso OK
 
 # mount binded
+Here /opt is used as sample
 
-```sudo mount -t nullfs /home/ /mnt```
+```sudo mount -t nullfs /opt/ /mnt```
+
+# mount overlay
+mount -t overlay overlay -o \
+lowerdir=/home/eggs/ovarium/filesystem.squashfs/opt,\
+upperdir=/home/eggs/ovarium/.upperdir/opt,\
+workdir=/home/eggs/ovarium/.workdir/opt \
+/home/eggs/ovarium/filestem.squashfs/opt
 
 # keyboard italian
 ```setxkbmap it```
