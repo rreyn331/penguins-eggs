@@ -1,8 +1,9 @@
 # FreeBSD eggs
 
-* pkg install editor/vscode
-* pkg install www/node
-* npm -i pnpm -g
+* sudo pkg install editor/vscode
+* sudo ln -s /usr/local/bin/vscode /usr/local/bin/code
+* sudo pkg install www/node
+* sudo npm -i pnpm -g
 
 Added:
 * bash OK
@@ -21,4 +22,5 @@ Added:
 * sudo OK
 * coreutils OK
 * xorriso OK
+
 
