@@ -23,4 +23,12 @@ Added:
 * coreutils OK
 * xorriso OK
 
+# mount binded
+
+```sudo mount -t nullfs /home/ /mnt```
+
+# keyboard italian
+```setxkbmap it```
+
+
 
