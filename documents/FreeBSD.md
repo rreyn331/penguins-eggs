@@ -31,7 +31,6 @@ Here /var is used as sample, we need: boot, etc, usr and var
 ```mkdir /home/eggs/ovarium/.overlay/upperdir/var```
 ```mkdir /home/eggs/ovarium/.overlay/workdir/var```
 
-
 ```sudo mount -t nullfs /var /home/eggs/ovarium/.overlay/lowerdir/var```
 
 # mount overlay
