@@ -70,5 +70,17 @@ mkdir /home/eggs/ovarium/filesystem.squashfs/var -p
 mount -t overlay overlay -o lowerdir=/home/eggs/ovarium/.overlay/lowerdir/var,upperdir=/home/eggs/ovarium/.overlay/upperdir/var,workdir=/home/eggs/ovarium/.overlay/workdir/var /home/eggs/ovarium/filesystem.squashfs/var
 ```
 
+@ openssh-portable
+```
+sudo pkg install openssh-portabl
+```
+
+from host:
+
+```
+ssh -Y artisan@192.168.1.15
+```
+
+
 # keyboard italian
 ```setxkbmap it```
