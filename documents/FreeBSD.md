@@ -50,6 +50,7 @@ workdir=/home/eggs/ovarium/.overlay/workdir/var \
 ```
 It seem to NOT work!!!
 
+```
 #############################################################
 # /var is a directory need to be presente, and rw
 # -----------------------------------------------------------
@@ -67,6 +68,7 @@ mkdir /home/eggs/ovarium/filesystem.squashfs/var -p
 
 # thirth: mount /var rw in /home/eggs/ovarium/filesystem.squashfs
 mount -t overlay overlay -o lowerdir=/home/eggs/ovarium/.overlay/lowerdir/var,upperdir=/home/eggs/ovarium/.overlay/upperdir/var,workdir=/home/eggs/ovarium/.overlay/workdir/var /home/eggs/ovarium/filesystem.squashfs/var
+```
 
 # keyboard italian
 ```setxkbmap it```
