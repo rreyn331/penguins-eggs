@@ -7,18 +7,18 @@
 
 Added:
 * bash OK
-* cryptsetup not found
+* cryptsetup not found (mpt nocessary)
 * curl OK
-* dosfstools not found
-* isolinux not found
+* dosfstools not found (just to have mkfs.vfat for UEFI)
+* isolinux not found (not necessary)
 * git OK
-* lvm2 not found
-* parted not found
-* pxelinux not found
+* lvm2 not found (not necessary)
+* parted not found (altenative?)
+* pxelinux not found (not necessary)
 * rsync OK
-* sshfs not found
+* sshfs not found (alternative?)
 * squashfs-tools OK
-* syslinux-common not found
+* syslinux-common not found (not necessary)
 * sudo OK
 * coreutils OK
 * xorriso OK
