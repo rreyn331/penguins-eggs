@@ -71,7 +71,7 @@ dependencies:
   react: 17.0.2
   shelljs: 0.8.5
   tftp: 0.1.2
-  tslib: 2.4.0
+  tslib: 2.4.1
   typescript: 4.8.4
 
 devDependencies:
@@ -612,7 +612,7 @@ packages:
       chalk: 4.1.2
       strip-ansi: 6.0.1
       supports-color: 8.1.1
-      tslib: 2.4.0
+      tslib: 2.4.1
 
   /@oclif/core/1.20.4:
     resolution: {integrity: sha512-giug32M4YhSYNYKQwE1L57/+k5gp1+Bq3/0vKNQmzAY1tizFGhvBJc6GIRZasHjU+xtZLutQvrVrJo7chX3hxg==}
@@ -4873,7 +4873,7 @@ packages:
       normalize-package-data: 3.0.3
       qqjs: 0.3.11
       semver: 7.3.8
-      tslib: 2.4.0
+      tslib: 2.4.1
       yeoman-environment: 3.12.1
       yeoman-generator: 5.7.0_yeoman-environment@3.12.1
       yosay: 2.0.2
@@ -4911,7 +4911,7 @@ packages:
       remark-rehype: 8.1.0
       shelljs: 0.8.5
       to-vfile: 6.1.0
-      tslib: 2.4.0
+      tslib: 2.4.1
       typescript: 4.8.4
       unified: 9.2.2
     transitivePeerDependencies:
@@ -5383,7 +5383,7 @@ packages:
   /rxjs/7.5.7:
     resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
@@ -5973,9 +5973,6 @@ packages:
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
-
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
