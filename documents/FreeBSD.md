@@ -27,20 +27,26 @@ not found we need alternative:
 # mount binded
 Here /var is used as sample, we need: boot, etc, usr and var
 
-```mkdir /home/eggs/ovarium/.overlay/lowerdir/var```
-```mkdir /home/eggs/ovarium/.overlay/upperdir/var```
-```mkdir /home/eggs/ovarium/.overlay/workdir/var```
+```
+sudo mkdir -p /home/eggs/ovarium/.overlay/lowerdir/var
 
-```sudo mount -t nullfs /var /home/eggs/ovarium/.overlay/lowerdir/var```
+sudo mkdir -p /home/eggs/ovarium/.overlay/upperdir/var
+
+sudo mkdir -p /home/eggs/ovarium/.overlay/workdir/var
+
+sudo mkdir -p /home/eggs/ovarium/filesystem.squashfs/var
+
+sudo mount -t nullfs /var /home/eggs/ovarium/.overlay/lowerdir/var
+```
 
 # mount overlay
 
 ```
-mount -t overlay overlay -o \
-lowerdir=/home/eggs/ovarium/.overlay/lowerdir/opt,\
-upperdir=/home/eggs/ovarium/.overlay/upperdir/opt,\
-workdir=/home/eggs/ovarium/.overlay/workdir/opt \
-/home/eggs/ovarium/filestem.squashfs/opt
+sudo mount -t overlay overlay -o \
+lowerdir=/home/eggs/ovarium/.overlay/lowerdir/var,\
+upperdir=/home/eggs/ovarium/.overlay/upperdir/var,\
+workdir=/home/eggs/ovarium/.overlay/workdir/var \
+/home/eggs/ovarium/filestem.squashfs/var
 ```
 
 # keyboard italian
