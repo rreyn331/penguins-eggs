@@ -70,9 +70,29 @@ mkdir /home/eggs/ovarium/filesystem.squashfs/var -p
 mount -t overlay overlay -o lowerdir=/home/eggs/ovarium/.overlay/lowerdir/var,upperdir=/home/eggs/ovarium/.overlay/upperdir/var,workdir=/home/eggs/ovarium/.overlay/workdir/var /home/eggs/ovarium/filesystem.squashfs/var
 ```
 
+Cercando la sintassi
+```
+#############################################################
+# /var is a directory need to be presente, and rw
+# -----------------------------------------------------------
+# create mountpoint lower
+mkdir -p /home/eggs/ovarium/.union/lowerdir/var 
+# first: mount /var rw in /home/eggs/ovarium/.union/lowerdir/var
+mount --bind --make-slave /var /home/eggs/ovarium/.union/lowerdir/var
+# now remount it ro
+mount -o remount,bind,ro /home/eggs/ovarium/.union/var
+
+# second: create mountpoint upper, work and /home/eggs/ovarium/filesystem.squashfs and mount var
+mkdir -p /home/eggs/ovarium/.union/upperdir/var 
+mkdir  -p /home/eggs/ovarium/filesystem.squashfs/var
+
+# thirth: mount /var rw in /home/eggs/ovarium/filesystem.squashfs
+mount -t union union -o lowerdir=/home/eggs/ovarium/.union/lowerdir/var,upperdir=/home/eggs/ovarium/.union/upperdir/var /home/eggs/ovarium/filesystem.squashfs/var
+```
+
 @ openssh-portable
 ```
-sudo pkg install openssh-portabl
+sudo pkg install openssh-portable
 ```
 
 from host:

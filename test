@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# cleaning
+umount /home/eggs/ovarium/.union/upperdir/var
+rm -rf eggs
+
+WORK_DIR="/usr/home/eggs/ovarium/"
+# create mountpoint lower
+mkdir -p ${WORK_DIR}.union/lowerdir/var 
+
+# first: mount /var rw in ${WORK_DIR}.union/lowerdir/var
+mount -t nullfs /var/ ${WORK_DIR}.union/lowerdir/var
+
+# now remount it ro
+mount -o remount,bind,ro ${WORK_DIR}.union/lowerdir/var
+
+# second: create mountpoint upper and ${WORK_DIR}filesystem.squashfs and mount var
+mkdir -p ${WORK_DIR}.union/upperdir/var 
+mkdir -p ${WORK_DIR}filesystem.squashfs/var
+
+# thirth: mount /var rw in /home/eggs/ovarium/filesystem.squashfs
